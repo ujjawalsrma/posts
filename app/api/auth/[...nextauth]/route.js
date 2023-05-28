@@ -13,7 +13,7 @@ const handler = NextAuth({
    
    
   ],
-  secret=process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async session({ session }) {
       // store the user id from MongoDB to session
