@@ -10,11 +10,7 @@ const UpdatePrompt = () => {
     const { data: session } = useSession();
     const router = useRouter();
 
-    if(!session)
-    {
-        signIn();
-        useRouter().push("/create-prompt")
-    }
+  
 
     const searchParams = useSearchParams();
     const idofdoc = searchParams.get("id");
