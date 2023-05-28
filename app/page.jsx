@@ -3,7 +3,7 @@ import Feed from "@components/Feed";
 const Home = () => (
   <section className='w-full flex-center flex-col'>
     <h1 className='head_text text-center'>
-      Build & Growww
+      Build & Grow
       <br className='max-md:hidden' />
       <span className='orange_gradient text-center'> Exceptional Reliable Unmatched</span>
     </h1>
