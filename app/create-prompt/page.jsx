@@ -9,14 +9,13 @@ import Form from "@components/Form";
 const CreatePrompt = () => {
   const { data: session , status } = useSession();
   const router = useRouter();
-
   if(status === "loading"){
     return<></>
   }
   if (status === "unauthenticated")
   {
-    signIn();
-    // router.push("/create-prompt");
+    // signIn();
+    router.push("/");
   }else{
 
  
@@ -29,6 +28,9 @@ const CreatePrompt = () => {
   const createPrompt = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    post.prompt = post.prompt.replaceAll('"', "'");
+    post.tag = post.tag.replaceAll('"', "'");
+    
 
     try {
       const response = await fetch("/api/prompt/new", {
